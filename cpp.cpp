@@ -48,17 +48,17 @@ class Graph{
     int level = 0;
     
     while(!q.empty()){
-        if(verbose){ printQueue(q, "beb"); } //что-то надо хз потом разберу  
+        if(verbose){ printQueue(q, "first step"); } //что-то надо хз потом разберу  
         int currentVertex = q.front();
         q.pop();
-        if(verbose){ printQueue(q, "chtymr"); }
+        if(verbose){; }
         cout << currentVertex << " ";
-        if(verbose){ printQueue(q, "chyros"); }
+        if(verbose){ printQueue(q, "посещает"); }
         for(int neighbor : adj[currentVertex]){
             if(!visited[neighbor]){
                 visited[neighbor]=true;
                 q.push(neighbor);
-                if(verbose){ printQueue(q, "am am"); }
+                if(verbose){ printQueue(q, "новая"); }
             }
             if(verbose){printQueue(q, "miao");}
         }
